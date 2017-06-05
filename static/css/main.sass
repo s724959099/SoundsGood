@@ -1,0 +1,41 @@
+@import "_myLibs.sass"
+$baseSize: 10px
+
+*
+  //+test
+  vertical-align: middle
+
+html, body
+  +fill
+
+a
+  text-decoration: none
+
+.content
+  +size(calc(100% - 200px),100%)
+  display: inline-block
+  padding: 50px
+
+
+
+.fill
+  +fill
+
+.zero
+  +to_0
+
+.text_center
+  +text_center
+
+.slidebar
+  +size(200px, 100%)
+  display: inline-block
+  ul
+    li
+      list-style-type: none
+  .logo
+    +size(200px, 200px)
+
+
+
+

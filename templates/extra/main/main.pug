@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title {{Title}}
+        | {% include "extra/component/staticFiles.html" %}
+    body
+        .container-fluid.zero.fill
+            nav.zero.slidebar
+                .logo
+                ul.list-group
+                    li.list-group-item.text_center
+                        a(href="/change/css") css轉換
+                    li.list-group-item.text_center
+                        a(href="/change/script") script轉換
+                    li.list-group-item.text_center
+                        a(href="/dbmodel/init") db.Model init
+                    li.list-group-item.text_center
+                        a(href="/backend") backend
+            .content
+                | {% block body %}{% endblock %}

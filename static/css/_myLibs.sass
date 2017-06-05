@@ -1,0 +1,45 @@
+@mixin center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+
+@mixin text_center
+  text-align: center
+  vertical-align: middle
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+@mixin fill
+  +size(100%,100%)
+
+@mixin text($size,$spacing,$color)
+  font-size: $size
+  letter-spacing: $spacing
+  color: $color !important
+
+@mixin test
+  border: solid 1px
+
+@mixin for_star
+  box-sizing: border-box
+  font-family: 微軟正黑體
+  position: relative
+
+@mixin to_0
+  padding: 0px
+  margin: 0px
+
+
+
+*
+  box-sizing: border-box
+  // border: solid 1px
+  font-family: 微軟正黑體
+  position: relative
+
+html,body
+  padding: 0px
+  margin: 0px

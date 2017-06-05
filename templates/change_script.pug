@@ -1,0 +1,32 @@
+| {% extends "extra/main/main.html"%}
+| {% block body%}
+#app
+    form(role='form')
+        .form-group
+            label(for='css_path') 要轉換的路徑
+            input#css_path.form-control(type='text', placeholder='輸入路徑' v-model="text")
+
+        .form-group
+            .radio
+                label
+                    input#option1(type='radio', name='option1', value='html' v-model="type" v-on:click="submit")
+                    |     轉成html
+
+        .form-group
+            .radio
+                label
+                    input#option2(type='radio', name='option2', value='pug' v-model="type" v-on:click="submit")
+                    |     轉成pug
+
+        .form-group
+            label(for="mytext") 輸出：
+            textarea#mytext.form-control(row="5" v-model="mytext")
+        button.btn#copy(type="button" data-clipboard-target="#mytext") copy
+
+script(src="{{ url_for('static', filename='js/change_script.js')}}")
+
+
+
+
+| {% endblock%}
+

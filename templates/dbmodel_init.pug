@@ -1,0 +1,20 @@
+| {% extends "extra/main/main.html"%}
+| {% block body%}
+#app
+    form(role='form')
+        .form-group
+            label(for="mytext") 輸入：
+            textarea#old_text.form-control(row="20" v-model="old_text")
+        button.btn#copy(type="button" v-on:click="submit") 產生
+        .form-group
+            label(for="mytext") 輸出：
+            textarea#new_text.form-control(row="30" v-model="new_text")
+        button.btn#copy(type="button" data-clipboard-target="#new_text") copy
+
+script(src="{{ url_for('static', filename='js/dbmodel_init.js')}}")
+
+
+
+
+| {% endblock%}
+
